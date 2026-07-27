@@ -1,0 +1,21 @@
+{
+  "name": "boardy4age",
+  "version": "0.1.0",
+  "description": "Draft a 4Age continuity email from your project's git history — human-approved, never auto-sent.",
+  "license": "MIT",
+  "author": "Nikhil Khedkar",
+  "bin": {
+    "boardy4age": "bin/boardy4age.js"
+  },
+  "main": "bin/boardy4age.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "keywords": ["boardy", "4age", "gmail", "cli", "continuity"]
+}
