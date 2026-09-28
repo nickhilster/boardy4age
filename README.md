@@ -1,8 +1,24 @@
 # boardy4age
 
-Human-approved continuity between your coding agent and Boardy — as a draft email you review, not an automation you have to trust blindly.
+Boardy4Age has **two modes** for contacting Boardy with useful context. Both keep the user in control of what is sent.
 
-## The idea
+## Choose a mode
+
+### 1. Personal-agent mode — share this repository
+
+Share the public Boardy4Age repository link with your personal AI agent and ask it to read [`AGENT_PROTOCOL.md`](AGENT_PROTOCOL.md). Before asking it to reach out, make sure your **primary email account is connected to that agent** through the agent platform's own connection flow. The agent should verify it can send from that account before proceeding. If it is not connected, the agent should help you connect it.
+
+Once setup is complete, say “Reach out to Boardy” or make an equivalent request. Your agent prepares the email using context available to it, shows you the sending account, recipient, subject, and full message, then waits for your approval of that exact text before sending. This mode requires no Boardy4Age CLI installation or Boardy4Age Google Cloud OAuth setup. It does not give the agent access to local Git history unless the agent separately has that access.
+
+Boardy also lists WhatsApp, LinkedIn, SMS/text, phone, email, and X in its [channel picker](https://www.boardy.ai/links/7guH3). The picker labels its text option SMS; Apple Messages can use iMessage where supported, but iMessage is not listed as a separate Boardy integration.
+
+### 2. CLI mode — let Boardy4Age read local Git history
+
+Choose the CLI when you want Boardy4Age itself to summarize a local project's Git history, include an optional focus note, and keep per-project thread state. The CLI creates a Gmail draft and never sends automatically. It requires Node.js and a one-time Gmail API/OAuth setup described below.
+
+For the personal-agent instructions, read [AGENT_PROTOCOL.md](AGENT_PROTOCOL.md). For the working local CLI, continue to Setup.
+
+## The CLI's idea
 
 Trust between an agent, a person, and Boardy isn't a single interaction — it accumulates from persistent context that doesn't reset every session. `boardy4age` makes that continuity concrete: it looks at what changed in your project's git history since the last time you ran it, drafts a plain-language summary as a "4Age" email, and creates it as a **Gmail draft**. You review it, edit it if you want, and hit send yourself.
 
