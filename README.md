@@ -6,11 +6,11 @@ Boardy4Age has **two modes** for contacting Boardy with useful context. Both kee
 
 ### 1. Personal-agent mode — share this repository
 
-Share the public Boardy4Age repository link with your personal AI agent and ask it to read [`AGENT_PROTOCOL.md`](AGENT_PROTOCOL.md). Before asking it to reach out, make sure your **primary email account is connected to that agent** through the agent platform's own connection flow. The agent should verify it can send from that account before proceeding. If it is not connected, the agent should help you connect it.
+Share the public Boardy4Age repository link with your personal AI agent and ask it to read [`AGENT_PROTOCOL.md`](AGENT_PROTOCOL.md). Choose either direct sending or a copy-ready email. Connecting your **primary email account** through the agent platform's normal flow is required only for direct sending; without a connection, the agent can prepare the complete message for you to send yourself.
 
-Once setup is complete, say “Reach out to Boardy” or make an equivalent request. Your agent prepares the email using context available to it, shows you the sending account, recipient, subject, and full message, then waits for your approval of that exact text before sending. This mode requires no Boardy4Age CLI installation or Boardy4Age Google Cloud OAuth setup. It does not give the agent access to local Git history unless the agent separately has that access.
+Before the draft is ready, provide a useful current-progress line and your LinkedIn profile. If either is missing, the agent should ask one concise follow-up. Then say “Reach out to Boardy” or make an equivalent request. The agent prepares the email using context available to it, shows the sending account (or says it is copy-ready), recipient, subject, and full message, then waits for your approval of that exact text before direct sending. This mode requires no Boardy4Age CLI installation or Boardy4Age Google Cloud OAuth setup. It does not give the agent access to local Git history unless the agent separately has that access. Share only information you are comfortable sending; do not include passwords, security tokens, or sensitive personal or business details. See [`AGENT_PROTOCOL.md`](AGENT_PROTOCOL.md).
 
-Boardy also lists WhatsApp, LinkedIn, SMS/text, phone, email, and X in its [channel picker](https://www.boardy.ai/links/7guH3). The picker labels its text option SMS; Apple Messages can use iMessage where supported, but iMessage is not listed as a separate Boardy integration.
+The rendered [Boardy channel picker](https://www.boardy.ai/links/7guH3) was checked on September 28, 2026 and showed iMessage, WhatsApp, X, LinkedIn, and Email. The options may change, so check the live picker for the current list.
 
 ### 2. CLI mode — let Boardy4Age read local Git history
 
